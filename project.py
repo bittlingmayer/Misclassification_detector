@@ -9,12 +9,15 @@ parser = argparse.ArgumentParser()
 
 parser.add_argument('--testPath', help = 'Path of test data')
 parser.add_argument('--modelPath', help = 'Path of trained model')
+parser.add_argument('--output', help = 'Output file')
 
 parsedArgs = parser.parse_args()
 
 testPath = parsedArgs.testPath
 modelPath = parsedArgs.modelPath
+output = parsedArgs.output
 
+outputFile = open(output, 'w')
 
 testFile = open(testPath, 'r')
 testData = testFile.read()
@@ -37,9 +40,12 @@ differences = np.array(differences, dtype = np.uint8)
 #print np.count_nonzero(differences)
 #print float(len(differences) - np.count_nonzero(differences))/len(differences)
 
-print np.nonzero(differences)[0][:5]
-for i in np.nonzero(differences)[0][:5]:
-	print rows[i]
+#print np.nonzero(differences)[0]
+for i in np.nonzero(differences)[0]:
+	#print rows[i]
+	outputFile.write(rows[i].strip() + '\n' + '\n')
 
+#print output
+outputFile.close()
 #print output
 
