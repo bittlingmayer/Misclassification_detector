@@ -20,12 +20,12 @@ and
     
 ## Parameters
 
-  --testPath___Path of test data.
+  --testPath: Path of test data.
   
-  --modelPath___Path of trained model.
+  --modelPath: Path of trained model.
   
-  --output___Path of output file where will be stored result of script.
+  --output: Path of output file where will be stored result of script.
   
-  --countOfWords___Count of words in test sentence.
+  --countOfWords: Count of words in test sentence.
   
-  --step___Step for taking words in test sentence.
+  --step: Step for taking words in test sentence.
