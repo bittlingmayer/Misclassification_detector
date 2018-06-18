@@ -6,7 +6,7 @@ Often when we train and test a model, we only look at the accuracy.  Seeing actu
 
 This script can be used for diagnosting reasons of misclassyifing data with fasttext. You can train your model with fasttext and pass it to this tool. After that you can see misclassified test data with word n-grams. This will help you to understand reasons of misclassifying. You are free to choose n-gram size and steps.
 
-## Example
+### Example
 
 Consider a model trained to do a simple classification task like sentiment analysis.  The model makes an error, it incorrectly predicts the following Amazon review is `negative` when the correct label `positive`. 
 
@@ -28,7 +28,7 @@ There are parameters that control the way that the row is divided into segments 
 
 ## Running
 
-misclass.py requires the following parameters:
+The full set of parameters required by misclass.py is:
 
     `testPath`: Path to the test data.
   
